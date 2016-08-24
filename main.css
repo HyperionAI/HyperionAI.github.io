@@ -349,6 +349,10 @@ body {
   margin: 0;
 }
 
+.fancybox-lock {
+  overflow: visible !important;
+}
+
 .sectionContainer {
   z-index: 1;
   position: relative;
@@ -371,7 +375,7 @@ body {
 }
 
 .sep {
-  margin-top: 1000px;
+  margin-top: 900px;
 }
 
 .how-container {
@@ -496,6 +500,13 @@ body {
 	background: linear-gradient(135deg, rgba(232,162,224,1) 0%, rgba(232,162,224,1) 35%, rgba(136,83,217,1) 100%);
 }
 
+.chartcontainer {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  transform: scale(1);
+}
+
 .chart-01 {
   position: absolute;
   margin-top: 800px;
@@ -509,23 +520,27 @@ body {
 
 .chart-02 {
   position: absolute;
-  margin-top: 900px;
-  right: 15%;
-  width: 461px;
-  height: 463px;
-  background: url(8178787dd9279afcfe614450ff84a275.png) no-repeat center center fixed;
-  backtround-size: cover;
+  margin-top: 1200px;
+  left: 15%;
+  width: 371px;
+  height: 200px;
+  /* 862 x 465 */
+  background-image: url(17725357fe21a881f154fdfac9b460d0.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   transition: width 1s;
 }
 
 .chart-03 {
   position: absolute;
-  margin-top: 900px;
+  margin-top: 1300px;
   right: 15%;
-  width: 461px;
-  height: 463px;
-  background: url(8178787dd9279afcfe614450ff84a275.png) no-repeat center center fixed;
-  backtround-size: cover;
+  width: 371px;
+  height: 200px;
+  /* 862 x 465 */
+  background-image: url(972eb933364d9e64e090fc20ffe69cbd.png);
+  background-repeat: no-repeat;
+  background-size: cover;
   transition: width 1s;
 }
 
@@ -569,7 +584,7 @@ body {
 
 .measure-text {
   position: absolute;
-  margin-top: 1000px;
+  margin-top: 950px;
   width: 450px;
   left: 29%;
   font-size: 1.4rem;
@@ -583,6 +598,10 @@ body {
   right: 0;
   margin: auto;
   height: 2000px;
+}
+
+.play-button-margin {
+  margin-top: 15px;
 }
 
 .download-app-screen {
