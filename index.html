@@ -3,45 +3,52 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" type="text/css" media="screen"/>
+    <link href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,300,600,700" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" type="text/css" media="screen"/>
     <title></title>
   <link href="main.css" rel="stylesheet"></head>
   <body>
     <div class="frame">
       <div id="frame-header">
-        <a data-scroll href="#app-screen" class="frame-header-link">THE APP</a>
-        <a data-scroll href="#pill-screen" class="frame-header-link">THE PILL</a>
-        <a data-scroll href="#story-screen" class="frame-header-link">STORY</a>
+        <a data-scroll href="#app-anchor" class="frame-header-link">THE APP</a>
+        <a data-scroll href="#measure-anchor" class="frame-header-link">THE PILL</a>
+        <a data-scroll href="#story-anchor" class="frame-header-link">STORY</a>
       </div>
     </div>
 
-    <div class="splashContainer">
+    <div class="splashContainer gray-bg">
       <div id="auroraContainer" class="auroraContainer">
-        <div id="aurora" class="aurora auroraAnim"></div>
+        <div class="fadeAnim">
+          <div id="aurora" class="aurora auroraAnim"></div>
+        </div>
       </div>
       <div class="logoWrapper">
         <img id="logo"/>
         <div class="fadeContent">
           <h1>The World's Most Personal Multivitamin</h1>
-          <a class="fancybox-media" href="http://vimeo.com/36031564">
-            <div class="video"></div>
-          </a>
-          <p>Hyperion.ai combines artificial intelligence with all-natural ingredients to bring you
+          <div class="fadeSub">
+            <p>Hyperion.ai combines artificial intelligence with all-natural ingredients to bring you
             the last nutritional supplement you'll ever need</p>
+          </div>
+          <a class="fancybox-media" href="https://vimeo.com/179417840">
+              <span><img class="play-button" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0nMS4wJyBlbmNvZGluZz0ndXRmLTgnPz4KPCFET0NUWVBFIHN2ZyBQVUJMSUMgJy0vL1czQy8vRFREIFNWRyAxLjEvL0VOJyAnaHR0cDovL3d3dy53My5vcmcvR3JhcGhpY3MvU1ZHLzEuMS9EVEQvc3ZnMTEuZHRkJz4KPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDUxMiA1MTIiIHhtbG5zOnhsaW5rPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5L3hsaW5rIiBlbmFibGUtYmFja2dyb3VuZD0ibmV3IDAgMCA1MTIgNTEyIj4KICA8Zz4KICAgIDxnIGZpbGw9IiMyMzFGMjAiPgogICAgICA8cGF0aCBkPSJtMzU0LjIsMjQ3LjRsLTEzNS4xLTkyLjRjLTQuMi0zLjEtMTUuNC0zLjEtMTYuMyw4LjZ2MTg0LjhjMSwxMS43IDEyLjQsMTEuOSAxNi4zLDguNmwxMzUuMS05Mi40YzMuNS0yLjEgOC4zLTEwLjcgMC0xNy4yem0tMTMwLjUsODEuM3YtMTQ1LjRsMTA2LjEsNzIuNy0xMDYuMSw3Mi43eiIvPgogICAgICA8cGF0aCBkPSJNMjU2LDExQzEyMC45LDExLDExLDEyMC45LDExLDI1NnMxMDkuOSwyNDUsMjQ1LDI0NXMyNDUtMTA5LjksMjQ1LTI0NVMzOTEuMSwxMSwyNTYsMTF6IE0yNTYsNDgwLjEgICAgQzEzMi40LDQ4MC4xLDMxLjksMzc5LjYsMzEuOSwyNTZTMTMyLjQsMzEuOSwyNTYsMzEuOVM0ODAuMSwxMzIuNCw0ODAuMSwyNTZTMzc5LjYsNDgwLjEsMjU2LDQ4MC4xeiIvPgogICAgPC9nPgogIDwvZz4KPC9zdmc+Cg=="/></span>
+              <span class="play-text">Watch Video</span>
+          </a>
         </div>
       </div>
     </div>
 
-    <a id="story-screen">
-      <div class="sectionContainer">
-        <div class="heading">how it works</div>
-        <img class="twenty-three-and-me" src="2a7f4f3063aa8f67c6b7469023aaccc4.png"/>
+    <div class="sectionContainer">
+      <a id="story-anchor"></a>
+      <div class="heading">how it works</div>
+      <div class="how-container">
         <img class="fitbit" src="da838c57fe02d99d0d6b3279e05b9568.png"/>
+        <img class="twenty-three-and-me" src="825b20f96d1d4a228a400325f338bd9b.png"/>
         <img class="iphone" src="c5d4f57e39c40810f7e154161b4caf16.png"/>
         <img class="pill-mid" src="17abe748415a6e7e66ae85965dee5742.png"/>
         <img class="pill-far-middle" src="e9eff5e02f62820a2dd7d6c313c1d4a8.png"/>
         <img class="pill-far-bottom" src="e9eff5e02f62820a2dd7d6c313c1d4a8.png"/>
+        <img class="withings-watch" src="9cf797cba4460cf05c2aa84384d70384.png"/>
         <div class="icon-block">
           <div class="icon-block-col">
             <img class="icon-block-img" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAF8AAACuCAQAAAD6ixnCAAAG2ElEQVR4Ae3dA3Al2R7A4X8wXoy1tm3btu3HrO3Nztq2bdu2mTUyayfZzGS+V9UPt97UOD2dnqrzBX1OZ/Cruo2r3BsTh8n19J8P1VFeJreQTdU53lUe8q6v/W5kLb71oadc7zT729pS+kXHUWteOzrLY4aaUD95wWX2sZrBUQydrKTe45qNzq8+9YYnPeC27OMej3nGa973k9Eb6nYHWUBVTCwWdLEfjew7T7rE/ja1pBl1jTHQ2WALWled092pQZuRfale/puVKVyJigZX28uyekU76GI+WzvBfX5Q8avN845/A/CzK21mYOTOzHZ2m1bAVpEfl4If1ekWE5VpXQF+0Te/f3IEfjBzFMIVYL/Ih7+CA6IgZgEPRT5cABaJwmjE0MiHO0DfKIxXIPLhMdA1CuMx0C3Hfyyi8PyeKT/lp/yUP9Gl/JSf8u/LM/9lDI8CuQ0MiDz4BN9GgVwK5o72U6UFr0WB1IM18rmpCPdEgewK6qL9rA9OigJZClwd7ec0sHEUSFct+EZ1tI9qX6NN3yiU+8DK0T42B/dGwWyfw/9rMh+BPUxf8MfsfgGrx4RS4wYdbahpYkKY3x3KoMH6amJ8WMh9yqTB1qpiXOjuTCMAv7reLhbTT5cokBq9zGMzZ/kUwBNmirExk7cA79hBt+hgqizvXsBv1osxsYDvwG/+WtnezGh1W9i+wI9trWM+neM/rOg9MMIeMTrm8iN41cyRsZgLDdVRmtxtM7VZSQ9XAHaKUdHHZ+ARU2bzOT2ERmfY0Gx6FvwxjRUd6jU0WD8yjgBtVhhV/u3gBd2z2e5afGF7tdGhLOUpXCarchJo1Cf+n83AtwZnsyG4xuRRAqr8TasnTZ6N7wWXj/yA5Wcg27PtiyFRIlbV5EE1Efr7CSwYFXau3CSxlDbnRcnYEEdWHqpyU1R4BSweodY73tQlSscZWs2ebSmNaDMoMmF28HI23hYrRAmZ3PeuzUZHgz0jE/YC+2TjZzwTJeVQw/TNzk/wQGTCjWD+CIOwa5SUabFDNvoKv6jKVnsHrWojbIYZorS859LKY52my1ZqwnvZ6Ai/Rom50bPZ8lSwVLYSPJ+NzvBBlJjTNGTLw8FalfzHstFlXit5/qfZsg6sn/JTfsqfFPOvc4Q1J918+GTSzv805U80KT/lp/yUn/JTfspP+Sn/LY/ZP93aKkDKL17KT/kpP+Wn/JSf8lN+yt/T3Gon3Xy4Jd1YLEDKL1LKT/kpP+Wn/JSf8lN+yk/5KT/lvzzp5l/sH2ZO9/Ok/JSf8lN+yi9Wyn8yG53r7Uki/yCVfMPxRjY6QWOUmEu9ki2HgBWylT7Fz9loZ/SM0vKsW7LlNWD2bKUHwbQR5sM6UVJ6aLV/NnoDw3XNVjsWbB2hyheuipKyNeaO0M8IvBKZsDzILhZHazVNlJAqL3vxP5s4HB+ZUOsbtBoUoa9fXR0lZCusl42eBYvGfzkBnJCN67BxlIzp/Oj+yrbi9agwWAtazByhyt2aLBMlop+3DTUwQo1XR/Ea5Y4HT6iJMKXnNdkwSsJs3veLBbPxweA11SO/CtUn4MRsNqV7cal+0cF0tpfffW7ebLaKNrRZLEZmSa1g/2xWbV9/aHa+5XSODmFuh/ocV+idzRf3GzgsRsXOgOPVZPNBTvQtWrzhMbcV+PGQ5/2EP11v4chYTxO4SXWMmgMAj5khMjpZ2r4ucJPbCv241JHWNUVkdHcK4E5dYvTsqBU0G6JvlIDOdvAZ4PKxbsgW9xGg2bU20js6iK6Wd7JGQJPdY1zorl6zii886faCN56HvWeYilvMEOPOIPW+VQbDXGWBGH+m1qCjtdmiPUfeFnCWusI/fgZHRns4GpwbBbMMaFAb7aGXFvyoSxTKxWDXaC83geWjQKp8i2ZTRHvZGRwcBTJnbu+8Yh5wfRTIluCIfE7abXguCuQgcrvN52t8EQVybo7vs+NNNEeB3AKmiTx4AqJA7kxvH5DyU37KT/kpP+VPsvlqCs+fIvLgXop9xNHzEPlwNZgtCuN9/Br5cBjYJgqiZ+WRwxxYEryicxTCP8DpkRcvgwdMW0D8+prA/JEXC2gCra6yge4xUehrG08DLog8WdbXAFo963ib5HNZ6GExu7jA69oA3JD7hqqnet+Diu884mz/tIYZ1cQ4Um1qy9re8e7QYASoeNcWMXHoZFXneM+otGn0krtc6CSHqbN99rGN7f1dncMc6wJ3eM5H/jQqw72k3uKqiniYeB1HuVuj9vrVsy7wd0vqFsXT21K2V+96T2nQbGyG+dJzbnGK3a1omigXPc1hCavZJNt0drRbttzCWpYxjwH5bxr/AqiNZqoVWEM3AAAAAElFTkSuQmCC"/>
@@ -62,13 +69,15 @@
             </div>
           </div>
         </div>
-        <img class="withings-watch" src="b89b8d9e5d751aaa94c412b652b9259e.png"/>
         <img class="bottle" src="e1dca0f8f95165ce5606bcac408fdb40.png"/>
         <img class="apple-watch" src="0fd963134413a5bbe2a0cdf4cd77eeed.png"/>
         <img class="pill-close" src="b414bdd83e9c8191b3aa4e9eac16b80e.png"/>
+      </div>
 
-        <div class="sep"></div>
-        <div class="heading">measure anything</div>
+      <div class="sep"></div>
+      <a id="measure-anchor" class="anchor"></a>
+      <div class="heading">measure anything</div>
+      <div class="measure-container">
         <img class="iphone-stage" src="63e37ce22718765ed2b9dc544c68294a.jpg"/>
         <div class="iphone-stage-desc">
           Some things just can't be measured with a device (yet). Hyperion.ai allows
@@ -76,38 +85,44 @@
           else you can think of.
         </div>
         <div class="chart-01 nowidth"></div>
+        <div class="measure-text">
+          Ever wondered how the amount of water you drink affects your mood?
+          Hyperion.ai allows you to compare your metrics against each other to
+          give you insight into how the things in your life relate to each
+          other.
+        </div>
+        <div class="chart-02 nowidth"></div>
+        <div class="chart-03 nowidth"></div>
       </div>
-    </a>
+    </div>
 
-    <a id="pill-screen">
-      <div id="ingredientsContainer">
-        <video id="ingredientsVid" loop>
-          <source src="51c29fbabdddc0f2a7dd928e8e8ebe40.webm" type="video/webm">
-          <source src="d2c0089170fbd0b0fcb970e73d4b8853.mp4" type="video/mp4">
-          Your brower does not support the video tag.
-        </video>
-        <div class="content">
-          <div class="subheader">Artificial Intelligence, Natural Ingredients</div>
-          <hr class="divider"/>
-          <div class="description">
-            We make sure to only include the highest quality ingredients available
-          </div>
-          <div class="description">
-            in your custom nutritional supplement. And we make sure we have a
-          </div>
-          <div class="description">
-            Certificate of Analysis from every one of our suppliers.
-          </div>
+    <div id="ingredientsContainer">
+      <video id="ingredientsVid" autoplay loop>
+        <source src="51c29fbabdddc0f2a7dd928e8e8ebe40.webm" type="video/webm">
+        <source src="d2c0089170fbd0b0fcb970e73d4b8853.mp4" type="video/mp4">
+        Your brower does not support the video tag.
+      </video>
+      <div class="content">
+        <div class="subheader">Artificial Intelligence, Natural Ingredients</div>
+        <hr class="divider"/>
+        <div class="description">
+          We make sure to only include the highest quality ingredients available
+        </div>
+        <div class="description">
+          in your custom nutritional supplement. And we make sure we have a
+        </div>
+        <div class="description">
+          Certificate of Analysis from every one of our suppliers.
         </div>
       </div>
-    </a>
+    </div>
 
-    <a id="app-screen">
-      <div class="download-app-screen">
-        <img class="animating-phones" src="b815aec87440f83a68b0b4cf251ff645.gif" alt="Animated Phone Screens"/>
-        
-      </div>
-    </a>
+    <div class="download-app-screen">
+      <a id="app-anchor"></a>
+      <div class="heading">download</div>
+      <img class="animating-phones" src="b815aec87440f83a68b0b4cf251ff645.gif" alt="Animated Phone Screens"/>
+      
+    </div>
 
     <div class="footer">
       <div class="footerColumn">
@@ -151,13 +166,26 @@
       </div>
     </div>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-media.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/smooth-scroll/10.0.0/js/smooth-scroll.min.js"></script>
-
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/helpers/jquery.fancybox-media.js"></script>
     <script>
-        smoothScroll.init();
+    $(document).ready(function () {
+      $('.fancybox-media')
+      .attr('rel', 'media-gallery')
+      .fancybox({
+        openEffect: 'none',
+        closeEffect: 'none',
+        prevEffect: 'none',
+        nextEffect: 'none',
+
+        arrows: false,
+        helpers: {
+          media: {},
+          buttons: {}
+        }
+      });
+    });
     </script>
 
   <script type="text/javascript" src="bundle.js"></script></body>
