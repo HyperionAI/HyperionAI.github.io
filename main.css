@@ -26,7 +26,8 @@
 
 .frame-header-link {
   font-weight: 600;
-  margin-right: 30px;
+  margin-right: 50px;
+  margin-left: 50px;
   font-size: 17px;
   text-decoration: none;
   color: #000;
@@ -522,10 +523,10 @@ body {
   position: absolute;
   margin-top: 1200px;
   left: 12%;
-  width: 371px;
+  width: 364px;
   height: 200px;
-  /* 862 x 465 */
-  background-image: url(17725357fe21a881f154fdfac9b460d0.png);
+  /* 674 x 370 */
+  background-image: url(b4eee114756983b47aeed06f623d48af.png);
   background-repeat: no-repeat;
   background-size: cover;
   transition: width 1s;
@@ -535,10 +536,10 @@ body {
   position: absolute;
   margin-top: 1300px;
   right: 17%;
-  width: 371px;
+  width: 364px;
   height: 200px;
-  /* 862 x 465 */
-  background-image: url(972eb933364d9e64e090fc20ffe69cbd.png);
+  /* 674 x 370 */
+  background-image: url(f56808b9d4c824e6f242fe875ac13f35.png);
   background-repeat: no-repeat;
   background-size: cover;
   transition: width 1s;
