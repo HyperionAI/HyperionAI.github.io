@@ -9,13 +9,13 @@
   transform: translate3d(0, 0, 0);
   top: 0;
   left: 0;
-  z-index: 9001;
+  z-index: 2001;
   pointer-events: none
   /* Change size of the border because 50px is too much on mobile screens */
 }
   @media (max-width: 600px) {
   .frame {
-    border: 10px solid white;
+    border: 10px solid white
     /*position: sticky;*/
   }
   }
@@ -29,8 +29,15 @@
   height: 50px;
   background-color: #fff;
   box-sizing: border-box;
-  padding: 15px;
+  padding: 15px
 }
+
+@media (max-width: 600px) {
+  #frame-header {
+    height: 40px;
+    padding: 7px
+  }
+  }
 
 .frame-header-link {
   font-weight: 600;
@@ -39,7 +46,7 @@
   font-size: 17px;
   text-decoration: none;
   color: #000;
-  z-index: 9002;
+  z-index: 2002;
   cursor: pointer;
   pointer-events: all
 }
@@ -47,7 +54,7 @@
 @media (max-width: 600px) {
   .frame-header-link {
     margin-right: 25px;
-    margin-left: 25px;
+    margin-left: 25px
   }
   }
 @keyframes hue {
@@ -85,8 +92,9 @@
 }
 
 .aurora {
-  background: url(e0fe8d7c710d7c9c952035214d597f21.png) no-repeat center center fixed;
+  background: url(e0fe8d7c710d7c9c952035214d597f21.png) no-repeat center center;
   background-size: cover;
+  background-attachment: fixed;
   top: 0;
   left: 0;
   width: 100%;
@@ -96,8 +104,15 @@
   perspective: 1000;
   -webkit-backface-visibility: hidden;
           backface-visibility: hidden;
-  z-index: 9000;
+  z-index: 10000
 }
+
+@media (max-width: 1200px) {
+  .aurora {
+    background-attachment: scroll;
+    background-attachment: initial;
+  }
+  }
 
 .auroraAnim {
   will-change: filter;
@@ -121,15 +136,27 @@
 #logo {
   display: block;
   margin: auto;
-  width: 125px;
+  width: 125px
 }
+
+@media (max-width: 600px) {
+  #logo {
+    width: 100px;
+  }
+  }
 
 .logoWrapper {
   position: relative;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, calc(-50% - 125px));
+  transform: translate(-50%, calc(-50% - 125px))
 }
+
+@media (max-width: 600px) {
+  .logoWrapper {
+    transform: translate(-50%, calc(-50% - 100px));
+  }
+  }
 
 .splashContainer .fadeContent {
   text-align: center;
@@ -181,19 +208,27 @@
 
 .fadeContent h1 {
   font-weight: 300;
-  font-size: 30px;
+  font-size: 30px
   /* gradient taken from: http://www.cssmatic.com/gradient-generator#'\-moz\-linear\-gradient\%28left\%2C\%20rgba\%28165\%2C80\%2C194\%2C1\%29\%200\%25\%2C\%20rgba\%28165\%2C80\%2C194\%2C1\%29\%2026\%25\%2C\%20rgba\%28230\%2C176\%2C39\%2C1\%29\%20100\%25\%29\%3B' */
-  background: rgba(165,80,194,1);
-  background: linear-gradient(to right, rgba(165,80,194,1) 0%, rgba(165,80,194,1) 26%, rgba(230,176,39,1) 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent
 }
 
 @media (max-width: 600px) {
   .fadeContent h1 {
     padding: 0 25px;
+    font-size: 18px;
   }
   }
+
+.backgroundcliptext .fadeContent h1 {
+  background: rgba(165, 80, 194, 1);
+  background: linear-gradient(to right, rgba(165,80,194,1) 0%, rgba(165,80,194,1) 26%, rgba(230,176,39,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.no-backgroundcliptext .fadeContent h1 {
+  color: rgba(165, 80, 194, 1);
+}
 
 .fadeContent .video {
   height: 100px;
@@ -213,9 +248,29 @@
 
 @media (max-width: 600px) {
   .fadeContent p {
-    padding: 0 50px;
+    padding: 0 30px;
+    font-size: 12px;
+    margin: 5px auto 0 auto;
   }
   }
+.content {
+  position: fixed;
+  top: 50%;
+  margin: auto;
+  color: #fff;
+  text-align: center;
+  width: 100%
+}
+  @media (max-width: 600px) {
+  .content {
+    top: 50vh;
+    left: auto;
+    left: initial;
+    margin: auto;
+    width: 100%
+  }
+  }
+
 .nnvidContainer {
   margin: 0 auto;
   width: 100%;
@@ -239,13 +294,17 @@
 
 #nnVid {
   position: absolute;
-  top: 50%;
+  top: 50vh;
   left: 50%;
   width: auto;
   height: auto;
   min-width: 100%;
   min-height: 120%;
   transform: translate3d(-50%, -40%, 0);
+}
+
+.no-videoautoplay #nnVid {
+  visibility: hidden;
 }
 
 #ingredientsVid {
@@ -275,26 +334,24 @@
   transform: translateY(25px);
   opacity: 0;
   transition: all 0.5s ease-out;
+  margin: auto
 }
 
-#ingredientsContainer .content .description {
-  color: #fff
-}
-
-@media (max-width: 1250px) {
-
-  #ingredientsContainer .content .description {
-    font-size: 18px;
-    max-width: inherit;
+@media (max-width: 800px) {
+  .content .description {
+    font-size: 15px
   }
   }
 
 @media (max-width: 600px) {
+  .content .description {
+    font-size: 13px
+  }
+  }
 
-  #ingredientsContainer .content .description {
-    font-size: 14px;
-  }
-  }
+#ingredientsContainer .content .description {
+  color: #fff;
+}
 
 .content .description.fade-in-up {
   opacity: 1;
@@ -312,6 +369,85 @@
 .content .delay2 {
   transition-delay: 0.6s;
 }
+
+#ingredientsContainer .content {
+}
+
+@media (max-width: 1200px) {
+  #ingredientsContainer .content {
+    width: 75%
+  }
+  }
+
+@media (max-width: 600px) {
+  #ingredientsContainer .content {
+    width: 100% /*left: -2%;*/
+  }
+  }
+
+.content .subheader {
+  font-size: 28px;
+  font-weight: 700;
+  opacity: 0;
+  transition: all 0.5s ease-out
+}
+
+@media (max-width: 600px) {
+  .content .subheader {
+    font-size: 18px
+  }
+  }
+
+.content .subheader.fade-in {
+  opacity: 1;
+}
+
+#ingredientsContainer .content .subheader {
+}
+
+@media (max-width: 1200px) {
+  #ingredientsContainer .content .subheader {
+    font-size: 24px
+  }
+  }
+
+@media (max-width: 600px) {
+  #ingredientsContainer .content .subheader {
+    font-size: 18px
+  }
+  }
+
+.content .divider {
+  border: none;
+  height: 5px;
+  color: #fff; /* old IE (taken from StackOverflow) */
+  background-color: #fff;
+  margin: 20px auto;
+  width: 0px;
+  transition: all 0.5s ease-out
+}
+
+@media (max-width: 1200px) {
+  .content .divider {
+    height: 4px
+  }
+  }
+
+@media (max-width: 600px) {
+  .content .divider {
+    height: 3px
+  }
+  }
+
+.content .divider.widen {
+  width: 40px
+}
+
+@media (max-width: 600px) {
+  .content .divider.widen {
+    width: 30px
+  }
+  }
 .footer {
   background-color: #588c7e;
   text-align: center;
@@ -340,7 +476,7 @@
 .signupColumn {
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .signupColumn {
     width: 100%
   }
@@ -349,7 +485,7 @@
 .descriptionColumn {
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 1200px) {
   .descriptionColumn {
     width: 50%
   }
@@ -432,6 +568,24 @@ body {
   overflow: visible !important;
 }
 
+.fancybox-overlay {
+  z-index: 10000;
+  overflow: hidden;
+}
+
+.fancybox-wrap {
+  overflow: hidden;
+  z-index: 10001;
+}
+
+.fancybox-inner {
+  overflow: hidden;
+}
+
+#fancybox-loading {
+  z-index: 10001;
+}
+
 .sectionContainer {
   z-index: 1;
   position: relative;
@@ -454,8 +608,15 @@ body {
 }
 
 .sep {
-  margin-top: 900px;
+  margin-top: 900px
 }
+
+@media (max-width: 600px) {
+
+  .sep {
+    margin-top: 750px;
+  }
+  }
 
 .how-container {
   position: absolute;
@@ -487,10 +648,10 @@ body {
   }
   }
 
-@media (max-width: 450px) {
+@media (max-width: 420px) {
 
   .icon-block {
-    padding: 25px 50px;
+    padding: 50px 50px;
   }
   }
 
@@ -518,7 +679,7 @@ body {
   height: 172px
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
   .icon-block-img {
     height: 80px;
@@ -531,18 +692,24 @@ body {
   margin-top: 40px
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
   .icon-block-description {
     margin-top: 20px;
-    font-size: 12px;
+    font-size: 13px;
   }
   }
+
+.icon-block-img,
+.how-container > img {
+  transition: width 0.4s ease-in, height 0.4s ease-in, right 0.4s ease-in, left 0.4s ease-in, top 0.4s ease-in;
+}
 
 .apple-watch {
   position: absolute;
   right: -67px;
-  top: -100px
+  top: -100px;
+  width: 400px
 }
 
 @media (max-width: 1200px) {
@@ -559,7 +726,7 @@ body {
   }
   }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
   .apple-watch {
     top: 10px;
@@ -628,7 +795,7 @@ body {
   }
   }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
   .bottle {
     top: 200px;
@@ -644,7 +811,7 @@ body {
   width: 200px
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
   .withings-watch {
     top: 30px;
@@ -660,7 +827,7 @@ body {
   top: 155px
 }
 
-@media (max-width: 400px){
+@media (max-width: 420px){
 
   .fitbit {
     width: 100px;
@@ -675,7 +842,7 @@ body {
   width: 250px
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
   .twenty-three-and-me {
     top: -20px;
@@ -705,7 +872,7 @@ body {
   }
   }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
   .pill-mid {
     width: 70px;
@@ -735,7 +902,7 @@ body {
   }
   }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
   .pill-close {
     width: 70px;
@@ -749,7 +916,7 @@ body {
   width: 100px
 }
 
-@media (max-width: 400px) {
+@media (max-width: 420px) {
 
   .pill-far-middle {
     width: 60px;
@@ -762,8 +929,15 @@ body {
   position: absolute;
   top: 350px;
   width: 130px;
-  left: 380px;
+  left: 380px
 }
+
+@media (max-width: 420px) {
+
+  .pill-far-bottom {
+    visibility: hidden;
+  }
+  }
 
 .iphone-stage {
   margin-top: 160px;
@@ -793,7 +967,7 @@ body {
   }
   }
 
-@media (max-width: 450px) {
+@media (max-width: 420px) {
 
   .iphone-stage-desc {
     margin-top: 180px;
@@ -894,102 +1068,6 @@ body {
 .nowidth {
   width: 0;
 }
-
-.content {
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  color: #fff;
-  text-align: center
-}
-
-@media (max-width: 600px) {
-
-  .content {
-    top: 60%;
-    padding: 0 40px;
-    left: 0;
-    transform: translateY(-50%);
-  }
-  }
-
-#ingredientsContainer .content {
-}
-
-@media (max-width: 1250px) {
-
-  #ingredientsContainer .content {
-    width: 75%;
-  }
-  }
-
-@media (max-width: 600px) {
-
-  #ingredientsContainer .content {
-    width: 83%;
-    left: -2%;
-  }
-  }
-
-.content .subheader {
-  font-size: 28px;
-  font-weight: 700;
-  opacity: 0;
-  transition: all 0.5s ease-out;
-}
-
-.content .subheader.fade-in {
-  opacity: 1;
-}
-
-#ingredientsContainer .content .subheader {
-}
-
-@media (max-width: 1250px) {
-
-  #ingredientsContainer .content .subheader {
-    font-size: 24px;
-  }
-  }
-
-@media (max-width: 600px) {
-
-  #ingredientsContainer .content .subheader {
-    font-size: 18px;
-  }
-  }
-
-.content .divider {
-  border: none;
-  height: 5px;
-  color: #fff; /* old IE (taken from StackOverflow) */
-  background-color: #fff;
-  margin: 20px auto;
-  width: 0px;
-  transition: all 0.5s ease-out;
-}
-
-.content .divider.widen {
-  width: 40px;
-}
-
-#ingredientsContainer .content .divider {
-}
-
-@media (max-width: 1250px) {
-
-  #ingredientsContainer .content .divider {
-    height: 4px;
-  }
-  }
-
-@media (max-width: 600px) {
-
-  #ingredientsContainer .content .divider {
-    height: 2px;
-  }
-  }
 
 .measure-text {
   position: absolute;
