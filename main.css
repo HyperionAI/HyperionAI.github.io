@@ -307,12 +307,12 @@
   height: 100vh;
   overflow: hidden;
   position: absolute;
-  top: calc(200vh + var(--standardHeight))
+  top: calc(200vh + 2750px)
 }
 
 @media (max-width: 420px) {
   #ingredientsContainer {
-    top: calc(200vh + var(--ip6pHeight))
+    top: calc(200vh + 1800px)
   }
   }
 
@@ -502,7 +502,7 @@
   background-color: #588c7e;
   text-align: center;
   position: absolute;
-  top: calc(400vh + var(--standardHeight));
+  top: calc(400vh + 2750px);
   left: 50px;
   width: calc(100% - 100px);
   /*width: 100%;*/
@@ -520,7 +520,7 @@
   .footer {
     width: calc(100% - 10px);
     left: 5px;
-    top: calc(400vh + var(--ip6pHeight))
+    top: calc(400vh + 1800px)
   }
   }
 
@@ -629,7 +629,7 @@ body {
   z-index: 1;
   position: relative;
   width: 100%;
-  height: var(--standardHeight);
+  height: 2750px;
   top: 200vh;
   left: 0;
   right: 0;
@@ -642,7 +642,7 @@ body {
 @media (max-width: 420px) {
 
   .sectionContainer {
-    height: var(--ip6pHeight);
+    height: 1800px;
   }
   }
 
@@ -1179,7 +1179,7 @@ body {
 
 .download-app-screen {
   position: absolute;
-  top: calc(300vh + var(--standardHeight));
+  top: calc(300vh + 2750px);
   background-color: rgba(236, 237, 241, 1);
   height: 100vh;
   width: 100%;
@@ -1190,7 +1190,7 @@ body {
 @media (max-width: 420px) {
 
   .download-app-screen {
-    top: calc(300vh + var(--ip6pHeight));
+    top: calc(300vh + 1800px);
   }
   }
 
