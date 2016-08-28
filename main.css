@@ -29,13 +29,15 @@
   height: 50px;
   background-color: #fff;
   box-sizing: border-box;
-  padding: 15px
+  padding: 15px;
+  z-index: 2002;
+  position: fixed
 }
 
 @media (max-width: 600px) {
   #frame-header {
     height: 40px;
-    padding: 7px
+    padding: 10px
   }
   }
 
@@ -165,13 +167,6 @@
   vertical-align: middle;
   width: 100%;
   margin-top: -230px
-  /*position: relative;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, calc(-50% - 125px));
-  @media (--tiny) {
-    transform: translate(-50%, calc(-50% - 100px));
-  }*/
 }
 
 @media (max-width: 600px) {
@@ -312,8 +307,14 @@
   height: 100vh;
   overflow: hidden;
   position: absolute;
-  top: calc(200vh + 2300px);
+  top: calc(200vh + var(--standardHeight))
 }
+
+@media (max-width: 420px) {
+  #ingredientsContainer {
+    top: calc(200vh + var(--ip6pHeight))
+  }
+  }
 
 #nnVid {
   position: absolute;
@@ -328,6 +329,17 @@
 
 .no-videoautoplay #nnVid {
   visibility: hidden;
+  display: none;
+}
+
+.nnFallback {
+  visibility: hidden;
+}
+
+.no-videoautoplay .nnFallback {
+  visibility: visible;
+  height: 150vh;
+  transform: translate3d(0, 0, 0);
 }
 
 #ingredientsVid {
@@ -339,6 +351,21 @@
   min-width: 100%;
   min-height: 130%;
   transform: translate3d(-50%, -40%, 0);
+}
+
+.no-videoautoplay #ingredientsVid {
+  visibility: hidden;
+  display: none;
+}
+
+.ingredientsFallback {
+  visibility: hidden;
+}
+
+.no-videoautoplay .ingredientsFallback {
+  visibility: visible;
+  height: 150vh;
+  transform: translate3d(0, 0, 0);
 }
 
 #ingredientsContainer h1 {
@@ -475,7 +502,7 @@
   background-color: #588c7e;
   text-align: center;
   position: absolute;
-  top: calc(400vh + 2300px);
+  top: calc(400vh + var(--standardHeight));
   left: 50px;
   width: calc(100% - 100px);
   /*width: 100%;*/
@@ -487,6 +514,13 @@
     width: calc(100% - 50px);
     left: 25px;
     margin-bottom: 25px
+  }
+  }
+  @media (max-width: 420px) {
+  .footer {
+    width: calc(100% - 10px);
+    left: 5px;
+    top: calc(400vh + var(--ip6pHeight))
   }
   }
 
@@ -595,15 +629,22 @@ body {
   z-index: 1;
   position: relative;
   width: 100%;
-  height: 2750px;
+  height: var(--standardHeight);
   top: 200vh;
   left: 0;
   right: 0;
   display: block;
   background-color: rgba(236, 237, 241, 1);
   overflow: hidden;
-  transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0)
 }
+
+@media (max-width: 420px) {
+
+  .sectionContainer {
+    height: var(--ip6pHeight);
+  }
+  }
 
 .heading {
   text-align: center;
@@ -620,6 +661,13 @@ body {
 
   .sep {
     margin-top: 750px;
+  }
+  }
+
+@media (max-width: 420px) {
+
+  .sep {
+    margin-top: 675px;
   }
   }
 
@@ -956,7 +1004,7 @@ body {
 .iphone-stage-desc {
   margin-top: 230px;
   width: 370px;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 300;
   padding: 20px;
   position: absolute;
@@ -978,16 +1026,22 @@ body {
     margin-top: 180px;
     right: 10%;
     width: 280px;
+    font-size: 15px;
+    padding: 10px;
   }
   }
 
 .chartcontainer {
-  position: absolute;
-  width: 100%;
-  height: 100%;
   transform: scale(1);
-  pointer-events: none;
+  pointer-events: none
 }
+
+@media (max-width: 420px) {
+
+  .chartcontainer {
+    transform: scale(0.6);
+  }
+  }
 
 .chart-01 {
   position: absolute;
@@ -1000,10 +1054,10 @@ body {
   transition: width 0.4s
 }
 
-@media (max-width: 500px) {
+@media (max-width: 420px) {
 
   .chart-01 {
-    margin-top: 950px;
+    opacity: 0.3;
   }
   }
 
@@ -1035,10 +1089,12 @@ body {
   }
   }
 
-@media (max-width: 650px) {
+@media (max-width: 420px) {
 
   .chart-02 {
-    display: none;
+    margin-top: 1300px;
+    width: 300px;
+    left: -100px;
   }
   }
 
@@ -1070,6 +1126,14 @@ body {
   }
   }
 
+@media (max-width: 420px) {
+
+  .chart-03 {
+    margin-top: 1250px;
+    right: -180px;
+  }
+  }
+
 .nowidth {
   width: 0;
 }
@@ -1090,12 +1154,13 @@ body {
   }
   }
 
-@media (max-width: 550px) {
+@media (max-width: 420px) {
 
   .measure-text {
+    margin-top: 600px;
     left: 10%;
-    width: 330px;
-    font-size: 1.3rem;
+    width: 300px;
+    font-size: 1.1rem;
   }
   }
 
@@ -1114,13 +1179,20 @@ body {
 
 .download-app-screen {
   position: absolute;
-  top: calc(300vh + 2300px);
+  top: calc(300vh + var(--standardHeight));
   background-color: rgba(236, 237, 241, 1);
   height: 100vh;
   width: 100%;
   text-align: center;
-  overflow: hidden;
+  overflow: hidden
 }
+
+@media (max-width: 420px) {
+
+  .download-app-screen {
+    top: calc(300vh + var(--ip6pHeight));
+  }
+  }
 
 .animating-phones,
 .app-store-logo {
